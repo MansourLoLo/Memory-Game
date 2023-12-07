@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Jockey+One&family=Langar&display=swap');
+
+html, body{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #85826F;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.6fr 4fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    gap: 2%;
+    width: 70%;
+    height: 85%;
+}
+.contenedor section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+#titulo{
+    grid-area: 1/1 / -3/3;
+}
+#titulo h1{
+    font-size: 3em;
+    margin: 0;
+    height: 70%;
+    font-family: 'Jockey One', sans-serif;
+}
+#tablero{
+    grid-area: 2/1 / -2/-2;
+    width: 100%;
+    height: 100%;
+}
+.juego{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    width: 95%;
+    height: 90%;
+    cursor: pointer;
+}
+.caja{
+    width: 14vw;
+    height: 13vh;
+    background-color: #b8b397;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    border-radius: 25px;
+}
+.caja:active{
+    transform: perspective(10em) rotateY(180deg);
+    transition: 1s;
+}
+.caja{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.cuadrado{
+    width: 60%;
+    height: 70%;
+    background-color: #000000;
+}
+#informacion{
+    grid-area: 2/2 / -2/3;
+    font-family: 'Langar', cursive;
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    place-content: center;
+    background-color: #8d8973;
+}
+#informacion section{
+    width: 90%;
+    text-align: center;
+}
+#informacion .Record{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Record hr{
+    width: 90%;
+    justify-content: flex-end;
+}
+#botones{
+    grid-area: 3/1 / -1/-2;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 6%;
+}
+button{
+    width: 40%;
+    height: 80%;
+    font-size: 1.5em;
+    background-color: #85826F;
+    border: 2px solid #000000;
+    border-radius: 25px;
+}
+button:hover {
+    transform:translateY(1);
+}
